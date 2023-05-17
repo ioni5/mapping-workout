@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 1rem;
+    color: white;
+    background-color: darkslategrey;
+}
+
 #map {
+    flex-grow: 1;
     height: 100vh;
+}
+
+.running__form {
+    background-color: rgb(62, 104, 104);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.running__form label {
+    margin-right: 0.3rem;
+}
+
+.running__form input {
+    padding: 0.1rem;
+}
+
+.running__form #submit {
+    width: 80px;
+    margin-top: 0.5rem;
+}
+
+.form__row {
+    width: 50%;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.running__form input {
+    width: 50px;
 }
