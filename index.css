@@ -43,7 +43,7 @@ main {
 
 .running__form #submit {
     width: 80px;
-    margin-top: 0.5rem;
+    padding: 0.1rem;
 }
 
 .form__row {
