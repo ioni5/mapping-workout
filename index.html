@@ -11,6 +11,40 @@
     <title>Mapping Workout</title>
 </head>
 <body>
-    <div id="map"></div>
+    <main>
+        <div class="sidebar">
+            <form class="running__form">
+                <div class="form__row">
+                    <label for="duration">Duration</label>
+                    <input 
+                        id="duration" 
+                        type="number"
+                        placeholder="min">
+                </div>
+                <div class="form__row">
+                    <label for="distance">Distance</label>
+                    <input 
+                        id="distance" 
+                        type="number"
+                        placeholder="km">
+                </div>
+                <div class="form__row">        
+                    <label for="cadence">Cadence</label>
+                    <input 
+                        id="cadence" 
+                        type="number"
+                        placeholder="step/min">
+                </div>
+                <div class="form__row">        
+                    <label for="location">Location</label>
+                    <input 
+                        id="location" 
+                        type="input">
+                </div>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="map"></div>
+    </main>
 </body>
 </html>
