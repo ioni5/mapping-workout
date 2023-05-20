@@ -49,7 +49,9 @@ function addWorkout(ev) {
 
     workingouts.push(workout);
 
+
     form.classList.remove("open");
+
     console.log(workout);
 }
 
