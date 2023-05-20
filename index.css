@@ -28,7 +28,7 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 10px;
     font-size: 12px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
 }

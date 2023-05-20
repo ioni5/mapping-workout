@@ -10,7 +10,7 @@ const typeSelector = document.querySelector("#type");
 const cadenceRow = document.querySelector(".form__row-cadence");
 const elevationRow = document.querySelector(".form__row-elevation");
 
-
+const form = document.querySelector("form");
 
 let workoutLocation = {};
 
@@ -27,6 +27,8 @@ if (navigator.geolocation) {
 
         map.on('click', (ev) => {
             workoutLocation = ev.latlng;
+
+            form.classList.add("open");
         });
     }, () => alert("Could not get your position"));
 } 
@@ -46,6 +48,9 @@ function addWorkout(ev) {
     }
 
     workingouts.push(workout);
+
+
+    form.classList.remove("open");
 
     console.log(workout);
 }
