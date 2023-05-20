@@ -13,9 +13,12 @@ main {
 
 .sidebar {
     width: 300px;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
     color: white;
-    background-color: darkslategrey;
+    background-color: rgb(37, 63, 63);
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
 }
 
 #map {
@@ -28,9 +31,11 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 10px;
     font-size: 12px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .running__form label {
@@ -65,4 +70,58 @@ main {
 }
 .close {
     display: none;
+}
+
+
+.workoutList {
+    list-style: none;
+    
+}
+
+.workoutItem {
+    background-color: rgb(62, 104, 104);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+.workoutItem > div {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.workoutItem > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.green__tag {
+    border-left: 5px solid green;
+}
+
+
+.yellow__tag {
+    border-left: 5px solid yellow;
+}
+
+.list {
+    overflow-y: scroll;
+    padding-right: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: rgb(53, 88, 88);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(72, 121, 121); 
+    border-radius: 10px;
 }
