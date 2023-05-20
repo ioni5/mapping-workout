@@ -28,17 +28,18 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 10px;
     font-size: 12px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-
+    justify-content: space-between;
 }
 
 .running__form label {
     margin-right: 0.3rem;
 }
 
-.running__form input {
+.running__form input, .running__form select {
     padding: 0.1rem;
+    width: 50px;
 }
 
 .running__form #submit {
@@ -46,12 +47,22 @@ main {
     padding: 0.1rem;
 }
 
-.form__row {
-    width: 50%;
+.form__row, .form__row-elevation, .form__row-cadence {
+    width: 46%;
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.running__form input {
-    width: 50px;
+.form__row-elevation  {
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+.close {
+    display: none;
 }

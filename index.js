@@ -3,7 +3,14 @@ const workingouts = [];
 const durationEl = document.querySelector("#duration");
 const distanceEl = document.querySelector("#distance");
 const cadenceEl = document.querySelector("#cadence");
+const elevationEl = document.querySelector("#elevation");
 const submitEl = document.querySelector("#submit");
+const typeSelector = document.querySelector("#type");
+
+const cadenceRow = document.querySelector(".form__row-cadence");
+const elevationRow = document.querySelector(".form__row-elevation");
+
+const form = document.querySelector("form");
 
 let workoutLocation = {};
 
@@ -20,18 +27,36 @@ if (navigator.geolocation) {
 
         map.on('click', (ev) => {
             workoutLocation = ev.latlng;
+
+            form.classList.add("open");
         });
     }, () => alert("Could not get your position"));
 } 
 
-submitEl.addEventListener("click", (ev) => {
+function addWorkout(ev) {
     ev.preventDefault();
-    workingouts.push({
+    let workout = {
+        type: typeSelector.value,
         distance: distanceEl.value,
         duration: durationEl.value,
-        cadence: cadenceEl.value,
         ...workoutLocation
-    });
+    }
+    if (workout.type === "cycling") {
+        workout.elevation = elevationEl.value;
+    } else {
+        workout.cadence = cadenceEl.value;
+    }
 
-    console.log(workingouts);
+    workingouts.push(workout);
+
+    form.classList.remove("open");
+    console.log(workout);
+}
+
+submitEl.addEventListener("click", addWorkout);
+
+typeSelector.addEventListener("change", (ev) => {
+    cadenceRow.classList.toggle("close");
+    elevationRow.classList.toggle("open");
+
 });
